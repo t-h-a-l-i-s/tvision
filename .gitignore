@@ -1,0 +1,14 @@
+*.o
+*.lo
+*.exe
+autom4te.cache/
+.libs/
+.deps/
+m4/
+*.a
+*.la
+config.log
+config.status
+stamp-h1
+config.h.in~
+lib/tvision

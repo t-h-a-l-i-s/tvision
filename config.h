@@ -16,10 +16,10 @@
 /* #undef DISABLE_8BIT_CHARS */
 
 /* Define to enable the Linux GPM mouse support. */
-#define ENABLE_GPM 1
+/* #undef ENABLE_GPM */
 
 /* Define to enable the Linux VCS support. */
-#define ENABLE_VCS 1
+/* #undef ENABLE_VCS */
 
 /* Define to enable the FreeBSD mouse support. */
 /* #undef ENABLE_FBSDM */
@@ -31,7 +31,7 @@
 #define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the <gpm.h> header file. */
-#define HAVE_GPM_H 1
+/* #undef HAVE_GPM_H */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -40,7 +40,7 @@
 /* #undef HAVE_LIBCURSES */
 
 /* Define to 1 if you have the `gpm' library (-lgpm). */
-#define HAVE_LIBGPM 1
+/* #undef HAVE_LIBGPM */
 
 /* Define to 1 if you have the `ncurses' library (-lncurses). */
 #define HAVE_LIBNCURSES 1
@@ -72,8 +72,7 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */

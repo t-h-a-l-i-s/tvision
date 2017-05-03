@@ -75,16 +75,19 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-unknown-linux-gnu
-host_triplet = x86_64-unknown-linux-gnu
+build_triplet = x86_64-unknown-cygwin
+host_triplet = x86_64-unknown-cygwin
 subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) acconfig.h \
 	$(srcdir)/config.h.in mkinstalldirs ChangeLog INSTALL README \
-	TODO compile config.guess config.sub depcomp install-sh \
-	missing ltmain.sh
+	TODO compile config.guess config.sub install-sh missing \
+	ltmain.sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
+	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -192,13 +195,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/dburlaka/tvision/missing aclocal-1.14
+ACLOCAL = ${SHELL} /projects/sources/my_own/tvision/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /home/dburlaka/tvision/missing autoconf
-AUTOHEADER = ${SHELL} /home/dburlaka/tvision/missing autoheader
-AUTOMAKE = ${SHELL} /home/dburlaka/tvision/missing automake-1.14
+AUTOCONF = ${SHELL} /projects/sources/my_own/tvision/missing autoconf
+AUTOHEADER = ${SHELL} /projects/sources/my_own/tvision/missing autoheader
+AUTOMAKE = ${SHELL} /projects/sources/my_own/tvision/missing automake-1.14
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -209,17 +212,17 @@ CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
-CYGPATH_W = echo
+CYGPATH_W = cygpath -w
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = false
+DLLTOOL = dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
 EGREP = /usr/bin/grep -E
-EXEEXT = 
+EXEEXT = .exe
 FGREP = /usr/bin/grep -F
 GREP = /usr/bin/grep
 INSTALL = /usr/bin/install -c
@@ -227,15 +230,16 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld -m elf_x86_64
+LD = /usr/x86_64-pc-cygwin/bin/ld.exe
 LDFLAGS = 
 LIBOBJS = 
-LIBS = -lgpm -lncurses 
+LIBS = -lncurses 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/dburlaka/tvision/missing makeinfo
+LT_SYS_LIBRARY_PATH = 
+MAKEINFO = ${SHELL} /projects/sources/my_own/tvision/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -258,10 +262,10 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = strip
 VERSION = 0.8
-abs_builddir = /home/dburlaka/tvision
-abs_srcdir = /home/dburlaka/tvision
-abs_top_builddir = /home/dburlaka/tvision
-abs_top_srcdir = /home/dburlaka/tvision
+abs_builddir = /projects/sources/my_own/tvision
+abs_srcdir = /projects/sources/my_own/tvision
+abs_top_builddir = /projects/sources/my_own/tvision
+abs_top_srcdir = /projects/sources/my_own/tvision
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -272,10 +276,10 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-unknown-linux-gnu
+build = x86_64-unknown-cygwin
 build_alias = 
 build_cpu = x86_64
-build_os = linux-gnu
+build_os = cygwin
 build_vendor = unknown
 builddir = .
 datadir = ${datarootdir}
@@ -283,15 +287,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-unknown-linux-gnu
+host = x86_64-unknown-cygwin
 host_alias = 
 host_cpu = x86_64
-host_os = linux-gnu
+host_os = cygwin
 host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/dburlaka/tvision/install-sh
+install_sh = ${SHELL} /projects/sources/my_own/tvision/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
