@@ -11,8 +11,10 @@ config.log
 config.status
 stamp-h1
 config.h.in~
-lib/tvision
+src/libtvision/tvision
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+.idea
+*.iml
