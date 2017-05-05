@@ -12,3 +12,7 @@ config.status
 stamp-h1
 config.h.in~
 lib/tvision
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
