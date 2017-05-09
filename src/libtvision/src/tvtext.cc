@@ -121,12 +121,12 @@ const char TFrame::initFrame[19] =
   "\x06\x0A\x0C\x05\x00\x05\x03\x0A\x09\x16\x1A\x1C\x15\x00\x15\x13\x1A\x19";
 
 char TFrame::frameChars[33] =
-    "   � ��� �������   � ��� ��ϻ�� "; // for UnitedStates code page
+    " \332\304\277  \300\304\331  \263 \263  \303\304\264 "; // for UnitedStates code page
 
 const char * TFrame::closeIcon = "[~\xFE~]";
 const char * TFrame::zoomIcon = "[~\x18~]";
 const char * TFrame::unZoomIcon = "[~\x12~]";
-const char * TFrame::dragIcon = "~��~";
+const char * TFrame::dragIcon = "~ÄÙ~";
 
 char TIndicator::dragFrame = '\xCD';
 char TIndicator::normalFrame = '\xC4';
@@ -164,12 +164,12 @@ TScrollChars TScrollBar::hChars = {'\x11', '\x10', '\xB1', '\xFE', '\xB2'};
 const char * TButton::shadows = "\xDC\xDB\xDF";
 const char * TButton::markers = "[]";
 
-const char * TDirListBox::pathDir   = "���";
-const char * TDirListBox::firstDir  =   "���";
-const char * TDirListBox::middleDir =   " ��";
-const char * TDirListBox::lastDir   =   " ��";
+const char * TDirListBox::pathDir   = "ÀÄÂ";
+const char * TDirListBox::firstDir  =   "ÀÂÄ";
+const char * TDirListBox::middleDir =   " ÃÄ";
+const char * TDirListBox::lastDir   =   " ÀÄ";
 const char * TDirListBox::drives = "Drives";
-const char * TDirListBox::graphics = "���";
+const char * TDirListBox::graphics = "ÀÃÄ";
 
 const char * TFileEditor::backupExt = "~";
 
