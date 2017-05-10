@@ -66,9 +66,10 @@ find_package(Curses)
 set(HAVE_CURSES_H CURSES_HAVE_CURSES_H)
 set(HAVE_NCURSES_H CURSES_HAVE_NCURSES_H)
 if(CURSES_FOUND)
-    include_directories("${CURSES_INCLUDE_DIR}")
     find_library(HAVE_LIBCURSES curses)
     find_library(HAVE_LIBNCURSES ncurses)
+    set(LIBS ${LIBS} ${CURSES_LIBRARIES})
+    set(INCLUDE_DIRS ${INCLUDE_DIRS} ${CURSES_INCLUDE_DIR})
 endif(CURSES_FOUND)
 
 check_include_files("memory.h" HAVE_MEMORY_H)
@@ -81,12 +82,12 @@ set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
-set (PROJECT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
-set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(PROJECT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 aux_source_directory(${PROJECT_SOURCE_DIR} LIB_SRCS)
 
-include_directories("${PROJECT_BINARY_DIR}")
-include_directories("${PROJECT_INCLUDE_DIR}")
+include_directories("${PROJECT_BINARY_DIR}" "${PROJECT_INCLUDE_DIR}" "${INCLUDE_DIRS}")
 
 add_library(${PROJECT_NAME} SHARED ${LIB_SRCS})
+target_link_libraries(${PROJECT_NAME} ${LIBS})
