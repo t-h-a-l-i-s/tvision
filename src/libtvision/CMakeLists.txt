@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(tvision VERSION 0.8)
 
 include(CheckIncludeFiles)
